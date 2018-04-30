@@ -1,20 +1,20 @@
-# -*- coding: utf-8 -*-
-#
-# Configuration file for the Sphinx documentation builder.
-#
-# This file does only contain a selection of the most common options. For a
-# full list see the documentation:
-# http://www.sphinx-doc.org/en/master/config
+import kaybee
+import kaybee_bulma
 
-# -- Path setup --------------------------------------------------------------
+kaybee_bulma_siteconfig = kaybee_bulma.SiteConfig(
+    logo=dict(
+        img_file='PyCharm_Logo.svg.png',
+        alt='PyCharm Logo Alt'
+    ),
+    copyright='2018, All Rights Reserved',
+    favicon='jetbrains_favicon.ico'
+)
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-#
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+kaybee_settings = kaybee.KaybeeSettings(
+    articles=dict(
+        use_toctree=True
+    )
+)
 
 
 # -- Project information -----------------------------------------------------
@@ -39,6 +39,8 @@ release = ''
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    kaybee.__title__,
+    kaybee_bulma.__title__
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -74,7 +76,7 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = 'kaybee_bulma'
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -97,59 +99,3 @@ html_static_path = ['_static']
 #
 # html_sidebars = {}
 
-
-# -- Options for HTMLHelp output ---------------------------------------------
-
-# Output file base name for HTML help builder.
-htmlhelp_basename = 'VisualTestingdoc'
-
-
-# -- Options for LaTeX output ------------------------------------------------
-
-latex_elements = {
-    # The paper size ('letterpaper' or 'a4paper').
-    #
-    # 'papersize': 'letterpaper',
-
-    # The font size ('10pt', '11pt' or '12pt').
-    #
-    # 'pointsize': '10pt',
-
-    # Additional stuff for the LaTeX preamble.
-    #
-    # 'preamble': '',
-
-    # Latex figure (float) alignment
-    #
-    # 'figure_align': 'htbp',
-}
-
-# Grouping the document tree into LaTeX files. List of tuples
-# (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
-latex_documents = [
-    (master_doc, 'VisualTesting.tex', 'Visual Testing Documentation',
-     'Paul Everitt \\textless{}paul.everitt@jetbrains.com\\textgreater{}', 'manual'),
-]
-
-
-# -- Options for manual page output ------------------------------------------
-
-# One entry per manual page. List of tuples
-# (source start file, name, description, authors, manual section).
-man_pages = [
-    (master_doc, 'visualtesting', 'Visual Testing Documentation',
-     [author], 1)
-]
-
-
-# -- Options for Texinfo output ----------------------------------------------
-
-# Grouping the document tree into Texinfo files. List of tuples
-# (source start file, target name, title, author,
-#  dir menu entry, description, category)
-texinfo_documents = [
-    (master_doc, 'VisualTesting', 'Visual Testing Documentation',
-     author, 'VisualTesting', 'One line description of project.',
-     'Miscellaneous'),
-]

@@ -1,20 +1,30 @@
-.. Visual Testing documentation master file, created by
-   sphinx-quickstart on Mon Apr 30 14:04:25 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. homepage::
+    published: 2018-05-01 12:23
+    heading: Visual Testing
+    subheading: Python and pytest With an IDE Frontend
+    style: primary
 
-Welcome to Visual Testing's documentation!
-==========================================
+
+==============
+Visual Testing
+==============
+
+.. sectionbox::
+    name: sbhero
+    style: splash
+
+    Python developers love writing code. Tests? Not so much. Whether it’s
+    the concepts of testing, or the interface of testing tools, testing is a
+    chasm not all cross.
+
+    This tutorial aims to bring Python testing to the masses, taking a new
+    approach to first contact with Python testing:
+
+    - Visual testing using PyCharm
+    - Driven by the popular pytest framework
+    - Real-world scenario during the live building of a simple Python
+      application
+
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+    :hidden:
